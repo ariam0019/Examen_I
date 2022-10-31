@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_I.Views.PageContact">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtcodigo" Placeholder="Ingrese codigo" Keyboard="Text"/>
+            <Entry x:Name="txtnombres" Placeholder="Nombres" Keyboard="Text"/>
+            <Entry x:Name="txtapellidos" Placeholder="Apellidos" Keyboard="Text"/>
+            <Entry x:Name="txttelefono" Placeholder="Telefono" Keyboard="Telephone"/>
+            <Entry x:Name="txtedad" Placeholder="Edad" Keyboard="Numeric"/>
+            <Picker Title="--select Pais--"
+                    x:Name="pickerCountry">
+                <Picker.Items>
+                    <x:String>
+                        Honduras(504)
+                    </x:String>
+                    <x:String>
+                        Guatemala(502)
+                    </x:String>
+                    <x:String>
+                        Costa Rica
+                    </x:String>
+                    <x:String>
+                        El Salvador
+                    </x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="txtnota" Placeholder="Nota" Keyboard="Text"/>
+
+            <Button x:Name="btnAgregar" Text="Salvar Contacto" Clicked="btnAgregar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

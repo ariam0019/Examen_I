@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_I.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="txtnombres" Placeholder="Ingrese un nombre" Keyboard="Text"/>
+        <Entry x:Name="txtapellidos" Placeholder="Ingrese el apellido" Keyboard="Text"/>
+        <Entry x:Name="txttelefono" Placeholder="Ingrese el telefono" Keyboard="Telephone"/>
+        <Entry x:Name="txtedad" Placeholder="Ingrese la edad" Keyboard="Numeric"/>
+        <Entry x:Name="txtpais" Placeholder="Ingrese el pais" Keyboard="Text"/>
+        <Entry x:Name="txtnota" Placeholder="Nota" Keyboard="Text"/>
+
+        <Button x:Name="btnAgregar" Text="Salvar" Clicked="btnAgregar_Clicked"/>
+        <Button x:Name="btnSegunda" Text="Ir a pagina" Clicked="btnSegunda_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
