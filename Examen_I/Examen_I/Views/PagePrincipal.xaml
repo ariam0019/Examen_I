@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="CONTACTOS"
              x:Class="Examen_I.Views.PagePrincipal">
-
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Agregar" x:Name="ToolAdd" Clicked="ToolAdd_Clicked"/>
@@ -21,11 +21,16 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding nombres}"/>
-                    <Label Text="{Binding apellidos}"/>
-                    <Label Text="{Binding edad}"/>
-                    <Label Text="{Binding pais}"/>
-                    <Label Text="{Binding nota}"/>
+                    <Frame BackgroundColor="#D554E0">
+                        <StackLayout>
+                            <Label Text="{Binding nombres}"/>
+                            <Label Text="{Binding apellidos}"/>
+                            <Label Text="{Binding edad}"/>
+                            <Label Text="{Binding telefono}"/>
+                            <Label Text="{Binding pais}"/>
+                            <Label Text="{Binding nota}"/>
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

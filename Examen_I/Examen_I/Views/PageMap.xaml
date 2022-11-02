@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" 
+             xmlns:local="clr-namespace:Examen_I"
              x:Class="Examen_I.Views.PageMap">
-
-    <maps:Map HorizontalOptions="FillAndExpand"
+    <StackLayout>
+        <Label Text="Latitud: "/>
+        <Label x:Name="Lat"/>
+        <Label Text="Longitud: "/>
+        <Label x:Name="Lon"/>
+        
+        <maps:Map HorizontalOptions="FillAndExpand"
              VerticalOptions="FillAndExpand"
              x:Name="mapas"
              IsShowingUser="True"/>
-    
+    </StackLayout>
+
 </ContentPage>

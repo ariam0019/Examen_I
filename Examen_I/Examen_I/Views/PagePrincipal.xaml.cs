@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Examen_I.Models;
+using Plugin.Geolocator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,12 +34,12 @@ namespace Examen_I.Views
         private async void ToolMap_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Views.PageMap());
-
         }
 
         private void ListContact_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
     }
 }

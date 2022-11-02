@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,41 @@ namespace Examen_I.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageMap : ContentPage
     {
+        double Lati;
+        double Longi;
         public PageMap()
         {
             InitializeComponent();
+            Localizar();
         }
+
+        private async void Localizar()
+        {
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+
+            if (locator.IsGeolocationAvailable)
+            {
+                if (locator.IsGeolocationEnabled)
+                {
+                    if (!locator.IsListening)
+                    {
+                        await locator.StartListeningAsync(TimeSpan.FromSeconds(1), 5);
+                    }
+
+                    locator.PositionChanged += (cambio, args) =>
+                    {
+                        var loc = args.Position;
+                        Lon.Text = loc.Longitude.ToString();
+                        Longi = double.Parse(Lon.Text);
+                        Lat.Text = loc.Latitude.ToString();
+                        Lati = double.Parse(Lat.Text);
+                    };
+                }
+            }
+                
+        }
+
         protected async override void OnAppearing()
         {
             base.OnAppearing();

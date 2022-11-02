@@ -51,9 +51,9 @@ namespace Examen_I.Controllers
                 .FirstOrDefaultAsync();
         }
 
-        public Task<int> Deletecontactos(Models.Contactos emple)
+        public  Task<int> DeleteContactosAsync(Models.Contactos emple)
         {
-            return _conexion.DeleteAsync(emple);
+            return  _conexion.DeleteAsync(emple);
         }
     }
 }

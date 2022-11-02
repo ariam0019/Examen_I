@@ -13,6 +13,9 @@ namespace Examen_I.Models
         public string nombres { get; set; }
         [MaxLength(100)]
         public string apellidos { get; set; }
+
+        [MaxLength(20)]
+        public int telefono { get; set; }
         [MaxLength(20)]
         public int edad { get; set; }
 
